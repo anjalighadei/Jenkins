@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    stages {
+        stage('Download Artifacts') {
+            steps {
+                sh 'echo Downloading artifacts from Jfrog'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'echo Deploying the build to target server'
+            }
+            
+        }
+        stage('Sanity Check') {
+            steps {
+                sh 'echo Post deployment sanity check'
+            }
+        }
+        stage('Notify Email') {
+            steps {
+                sh 'echo Email notification to respective teams'
+            }
+        } 
+    }
+}

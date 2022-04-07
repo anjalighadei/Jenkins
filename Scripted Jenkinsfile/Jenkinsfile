@@ -1,0 +1,11 @@
+node {
+    stage('Code Fetch') {
+        sh 'echo Hello World'
+    }
+    stage('Build') {
+        sh 'echo Hello World'
+    }
+    stage('Upload to Jfrog') {
+        sh 'echo Hello World'
+    }
+}

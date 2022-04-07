@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Code Fetch') {
+            steps {
+                sh 'echo Fetching code from github'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'echo Building and creating war file'
+            }
+            
+        }
+        stage('Upload to Jfrog') {
+            steps {
+                sh 'echo Build artifact uploading to Jfrog'
+            }
+        }
+    }
+}
