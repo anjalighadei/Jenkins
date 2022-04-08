@@ -4,6 +4,7 @@ pipeline {
         stage('Code Fetch') {
             steps {
                 sh 'echo Fetching code from github'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/anjalighadei/MyDemoWebSite.git']]])
             }
         }
         stage('Build') {
